@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9189a634-4d0b-4663-8e08-0fc8e76c2c67">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[Select ordonnance.* , medicament.*, utilisateurs.nom as nom ,patient.nom_pat,patient.prénom_pat,patient.date_naissance , medecin.specialite from ordonnance left join medicament on (medicament.ordonnance_id=ordonnance.ordonnance_id) left join patient on (patient.matricule_pat=ordonnance.matricule_pat) LEFT join medecin on (ordonnance.medecin_id=medecin.nom_utilisateur) left join utilisateurs on (medecin.nom_utilisateur=utilisateurs.nom_utilisateur)]]>
+	</queryString>
+	<field name="ordonnance_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date_or" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="duré_trait" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="matricule_pat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="medecin_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="consultation_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="medicament_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_med" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="famille_med" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="forme" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dosage" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="posologie_usuelle" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="observation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qte_med" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_pat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prénom_pat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date_naissance" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="specialite" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="232" splitType="Stretch">
+			<textField>
+				<reportElement x="423" y="67" width="100" height="20" uuid="3d251bdd-6b0b-4128-8f8d-75dc57f05ed4"/>
+				<textFieldExpression><![CDATA[$F{date_or}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="362" y="127" width="50" height="20" uuid="e35b575c-2435-45b5-bb56-9a541502ec9f"/>
+				<text><![CDATA[Prénom :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="191" width="280" height="41" forecolor="#6C086C" uuid="afc388d8-7423-495d-9100-4ee96bd73629"/>
+				<textElement>
+					<font fontName="Goudy Old Style" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ordonnance Médicale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="98" width="39" height="20" uuid="79807d90-83fc-4580-b208-4e290dc5856f"/>
+				<text><![CDATA[Nom :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="67" width="50" height="20" uuid="c26d4683-ecd1-4013-8f30-f724de5e705c"/>
+				<text><![CDATA[Fait le :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="423" y="98" width="100" height="20" uuid="0c5404a5-e4c9-4287-a9e2-ad8b16dbad12"/>
+				<textFieldExpression><![CDATA[$F{nom_pat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="107" width="100" height="20" uuid="a647ad9f-3629-4737-9a90-fdb565a20f2b"/>
+				<textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="412" y="16" width="125" height="20" uuid="eb1ada27-c4f2-49fb-b0ff-c06a9f2fabe1"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[El shifaa Cabinet medical.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="423" y="127" width="100" height="20" uuid="41a9a025-dbdf-4ab0-875c-21ef62184d54"/>
+				<textFieldExpression><![CDATA[$F{prénom_pat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="138" width="100" height="20" uuid="2db00840-ea07-48a4-908f-2e03ed914bd1"/>
+				<textFieldExpression><![CDATA[$F{specialite}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="89" height="87" uuid="d4b7b8dc-5fe9-4b36-bcd4-86cc985f4fc7"/>
+				<imageExpression><![CDATA["C:\\Users\\azus\\Documents\\NetBeansProjects\\gestion d'une cabinet medicale V7\\src\\Images\\logo_impression.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="6" y="107" width="20" height="20" uuid="52246239-3d1f-4f75-9bb2-044c0d7633f6"/>
+				<text><![CDATA[Dr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="158" width="100" height="20" uuid="28c88037-8f91-466b-9f33-1feb7f7bdfd9"/>
+				<text><![CDATA[Duré traitement :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="270" y="158" width="72" height="20" uuid="97daf090-b01b-4e28-bd1f-ce04c53fc7c2"/>
+				<textFieldExpression><![CDATA[$F{duré_trait}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="342" y="158" width="28" height="20" uuid="451f62a5-6a0c-42c4-90e2-564cf7f94788"/>
+				<text><![CDATA[Jours]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="397" y="24" width="63" height="20" uuid="5951b7cb-9887-4b85-9425-d6bfe90db132"/>
+				<text><![CDATA[Posologie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="489" y="24" width="47" height="20" uuid="548d3014-b9e1-403c-90de-e12a0f75bd36"/>
+				<text><![CDATA[Quantité]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="24" width="40" height="20" uuid="09578542-c7d0-4034-9252-b1d317a43d26"/>
+				<text><![CDATA[Dosage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="24" width="47" height="20" uuid="bb5fa71d-8d4a-44c4-8973-5f023730e1e0"/>
+				<text><![CDATA[Famille]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="24" width="50" height="20" uuid="a7eb7ff3-54fd-4b95-afcd-1c419b0325f4"/>
+				<text><![CDATA[Forme]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="24" width="68" height="20" uuid="dda4adf5-52df-4853-897d-bd8cf2bad9a2"/>
+				<text><![CDATA[Médicament]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="83" splitType="Stretch">
+			<textField>
+				<reportElement x="142" y="23" width="100" height="20" uuid="622661d6-129f-4853-a40f-aaf955f1edbd"/>
+				<textFieldExpression><![CDATA[$F{famille_med}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="23" width="56" height="20" uuid="8277c6b2-9595-4e7a-a7c2-acc083e87a56"/>
+				<textFieldExpression><![CDATA[$F{dosage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="409" y="23" width="63" height="20" uuid="0dc86e65-12f5-4ca5-9cdc-6ce048ddf0bb"/>
+				<textFieldExpression><![CDATA[$F{posologie_usuelle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="23" width="71" height="20" uuid="942cf6ba-25ee-4f29-aa11-399b5d881d74"/>
+				<textFieldExpression><![CDATA[$F{forme}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="501" y="23" width="47" height="20" uuid="723d47f1-c58e-4e6e-a123-2d4fb74d107d"/>
+				<textFieldExpression><![CDATA[$F{qte_med}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="23" width="100" height="20" uuid="ce7d951e-ea92-45ef-a5d1-156d32643df2"/>
+				<textFieldExpression><![CDATA[$F{nom_med}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2296de7b-43ed-49de-aa3f-bee37fb4bdfc">
+	<property name="ireport.zoom" value="1.0000000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="6"/>
+	<style name="Heading 1" fontSize="16" isBold="true"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     patient.`matricule_pat` ,
+     patient.`nom_pat` ,
+     patient.`prénom_pat` ,
+     patient.`date_naissance` ,
+     patient.`maladie_pat` ,
+     patient.`numTel` ,
+     patient.`numTelUrgence` ,
+     patient.`adresse_pat` ,
+     patient.`antécédents_personnels` ,
+     patient.`antécédents_familiaux` ,
+     patient.`antécédents_médicaux` ,
+     patient.`antécédents_chirurgicaux` ,
+     patient.`groupe_sanguin` ,
+     patient.`sexe` ,
+     patient.`num_sécurité_social` ,
+     patient.`email` ,
+     patient.`note` ,
+     patient.`situation_familiale` 
+FROM
+     `patient` patient]]>
+	</queryString>
+	<field name="matricule_pat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_pat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prénom_pat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date_naissance" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="maladie_pat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numTel" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numTelUrgence" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="adresse_pat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="antécédents_personnels" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="antécédents_familiaux" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="antécédents_médicaux" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="antécédents_chirurgicaux" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="groupe_sanguin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexe" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="num_sécurité_social" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="note" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="situation_familiale" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="-315" width="315" height="79" uuid="4e34076d-0018-4079-bc61-12d78f1df510"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="36" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Fiche de patient ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="-315" width="315" height="79" uuid="0d134052-bbba-4d44-938c-eedceea419f9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="36" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Fiche de patient ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="-315" width="315" height="79" uuid="981cb1bc-b018-407c-bff4-3c1105493499"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="36" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Fiche de patient ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="21" width="100" height="20" uuid="affb9e68-8604-46a5-b354-417693f38ca0"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[De : Dr  Nadjib.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="1" width="125" height="20" uuid="37991676-3e35-4db9-b24b-13dd436392b7"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[El shifaa Cabinet medical.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="382" y="1" width="38" height="20" uuid="bffe639b-7da3-455c-98b0-723b8165dbef"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Fait le :]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="89" height="87" uuid="436ebe45-dc5d-4d65-a0b6-b7aba36d4788"/>
+				<imageExpression><![CDATA["C:\\Users\\azus\\Documents\\NetBeansProjects\\gestion d'une cabinet medicale V7\\src\\Images\\logo_impression.png"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="431" y="1" width="100" height="20" uuid="334c754c-7889-4415-9d14-ee9fbca019a5"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="425" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="173" width="100" height="20" uuid="7a3b12af-cafe-4afc-b62d-71923734e216"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Date de naissance :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="259" width="100" height="20" uuid="d3c940cd-ef4b-46ad-afe9-dabd3cd10f3c"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Numéro téléphone :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="215" width="100" height="20" uuid="2cc47fdc-c2e2-4b80-924e-8f9e57c4c38d"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Maladie :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="134" width="100" height="20" uuid="a7d9d802-5ae8-42e7-b92a-b04c2191c921"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Prénom :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="56" width="100" height="20" uuid="f2be3896-6483-4b37-9d33-166bcfb2994f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Matricule :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="92" width="100" height="20" uuid="115d2f03-7fe9-4ccf-a265-238457778cf6"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Nom :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="159" y="134" width="100" height="20" uuid="ff99cc02-f11b-4d03-913e-33479058c812"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prénom_pat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="259" width="100" height="20" uuid="17a0d58b-6644-41cb-9f95-d63c736f0193"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numTel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="56" width="100" height="20" uuid="b155e04c-5da1-492a-aa79-937e8ffbfaca"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{matricule_pat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="92" width="100" height="20" uuid="b8b32b6b-fc25-428b-ae1e-b694e0919fa4"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom_pat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="173" width="100" height="20" uuid="15222594-0513-42ef-b914-22b73ef4b823"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date_naissance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="215" width="100" height="20" uuid="b13ef848-d10f-43f3-9289-199cacb3397e"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maladie_pat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="284" y="97" width="128" height="20" uuid="e39b8de0-e870-4731-b4a7-b76b8ef02812"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Antécédenrs médicaux :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="301" width="100" height="20" uuid="75f64f75-bef9-4be1-a651-701b9792e8ee"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Email :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="301" width="100" height="20" uuid="e7ec33a0-ff15-4f67-80ba-9090f306b8d7"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Adresse :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="341" width="128" height="20" uuid="b9188b9a-042b-4c84-ade7-4d372bb18e55"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Antécédents personnels :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="215" width="100" height="20" uuid="cb8c85bb-34cf-46aa-9cb4-12ef1308fa7b"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Sexe :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="56" width="128" height="20" uuid="7ec1f8da-4115-45fb-89d7-e341b08c2cdb"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Antécédents familiaux :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="134" width="128" height="20" uuid="663ab42e-94c9-4c5b-9d58-2b8120d69d42"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Antécédents chirurgicaux :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="337" width="100" height="20" uuid="8f135227-c832-4011-b7f6-5363fb538173"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Situation Familiale :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="259" width="118" height="20" uuid="50db2b3b-fb38-4a60-b5ae-7aae1118fc33"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Numéro sécurité social :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="175" width="100" height="20" uuid="0b3a0169-45b0-4ef7-ab86-03e1c8007ffd"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Groupe sanguin :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="433" y="56" width="100" height="20" uuid="6cd42bff-dfc6-460b-acf7-8741388da98c"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{antécédents_familiaux}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="212" width="100" height="20" uuid="f307ff22-4c64-4b3b-9f5e-7828c36421c5"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sexe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="134" width="100" height="20" uuid="520df3fa-9fdf-46ef-a951-839dc0148731"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{antécédents_chirurgicaux}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="97" width="100" height="20" uuid="88a295d4-7682-4766-a1ee-e6a79df73f82"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{antécédents_médicaux}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="259" width="100" height="20" uuid="b90a37e0-0698-481a-9bde-02481fc4c8a9"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num_sécurité_social}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="341" width="100" height="20" uuid="32b26842-ac0a-4daa-8d0c-d7ab67f6fa76"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{antécédents_personnels}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="301" width="100" height="20" uuid="331dada3-b306-4726-871b-7794cedd22ff"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adresse_pat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="301" width="100" height="20" uuid="e29a87a7-0fe1-4087-adc2-1ffb6c16ac34"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="337" width="100" height="20" uuid="7f07084d-f1a6-470d-b8fe-05c7203d8361"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{situation_familiale}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="175" width="100" height="20" uuid="fa83e0c9-2c42-439d-b418-3041a7d083d9"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{groupe_sanguin}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="11" width="555" height="1" uuid="57961348-ad60-406d-a215-20f341ef1da6"/>
+			</line>
+			<line>
+				<reportElement x="554" y="11" width="1" height="403" uuid="a8a1deb6-2d51-4207-8d6c-cb1edd7d1406"/>
+			</line>
+			<line>
+				<reportElement x="0" y="372" width="555" height="1" uuid="d90e205f-56c2-47ae-9560-998c93da725a"/>
+			</line>
+			<line>
+				<reportElement x="0" y="11" width="1" height="403" uuid="825302bd-7fbc-4cd6-ba27-08ac179409ad"/>
+			</line>
+			<staticText>
+				<reportElement x="171" y="11" width="166" height="45" forecolor="#6C086C" uuid="48ae77e8-f38d-4d49-9351-ca4dc83b27f0"/>
+				<textElement>
+					<font fontName="Goudy Old Style" size="28" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Fiche Patient]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="413" width="555" height="1" uuid="87e53290-0d58-488d-bd26-f4fcb12b37fb"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="58b4aeb5-d5ce-4568-bb37-bc61e876de25"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="374" width="115" height="20" uuid="b3cd5823-c295-4105-bf89-50d944c4eed2"/>
+				<text><![CDATA[Adresse :Algerie Béjaia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="394" width="196" height="20" uuid="9f396826-ae02-4ea2-8638-0e46288cb7ca"/>
+				<text><![CDATA[Tél / Fix : 06 12 12 12 12 / 034 25 4628]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

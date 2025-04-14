@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="09a04c71-64ce-47b6-b133-7909522ea50e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select consultation.*, utilisateurs.nom,utilisateurs.prénom from consultation,utilisateurs where consultation.medecin_id=utilisateurs.nom_utilisateur;]]>
+	</queryString>
+	<field name="consultation_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="matricule_pat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="medecin_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date_cons" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="motif" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="taille" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="poids" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="température" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fréquence_cardiaque" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="glycémie" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pression_artérielle" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="imc" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="imcdec" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="résultat_cons" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="diagnostique" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prix_consultation" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="observation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prénom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="98" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="443" y="-362" width="100" height="20" uuid="ca58397b-c9a0-40cf-949b-f1cc921ec092"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="101" y="-362" width="125" height="20" uuid="3ab988f3-6a43-4e04-92e6-ce42ed49055a"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[El shifaa Cabinet medical.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="-342" width="100" height="20" uuid="01f49b50-c748-4cce-b4c6-46a357910b12"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[De : Dr  Nadjib.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="12" y="-363" width="89" height="87" uuid="ee3d2848-ce1a-409e-a8ee-73c7531bd561"/>
+				<imageExpression><![CDATA["C:\\Users\\azus\\Documents\\NetBeansProjects\\gestion d'une cabinet medicale V7\\src\\Images\\logo_impression.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="10" y="-362" width="553" height="1" uuid="dd26afdd-c127-4ebf-9f0d-6299ebc178ca"/>
+			</line>
+			<staticText>
+				<reportElement x="181" y="-351" width="166" height="45" forecolor="#6C086C" uuid="5e06b9ea-1f5d-4a36-ab7d-d8383ab8dabd"/>
+				<textElement>
+					<font fontName="Goudy Old Style" size="28" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Fiche Patient]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="-362" width="38" height="20" uuid="04d33c18-8a59-40b9-82b2-70175779c553"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Fait le :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="11" y="-351" width="555" height="1" uuid="c366ad46-d927-46a9-b6f8-a4d2a46eacdd"/>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="443" y="-362" width="100" height="20" uuid="d36e1b8b-c429-41bb-b465-3627ddcadd7e"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="101" y="-362" width="125" height="20" uuid="abafa763-1625-425b-848d-5656e4d62140"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[El shifaa Cabinet medical.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="-342" width="100" height="20" uuid="0ae88449-8f06-4afa-91af-fb3112ba85f5"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[De : Dr  Nadjib.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="12" y="-363" width="89" height="87" uuid="1352e23e-f3a2-4f1b-a791-0c14dbde3957"/>
+				<imageExpression><![CDATA["C:\\Users\\azus\\Documents\\NetBeansProjects\\gestion d'une cabinet medicale V7\\src\\Images\\logo_impression.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="10" y="-362" width="553" height="1" uuid="f9b9d0b7-12b1-4301-a404-dbd923f19a36"/>
+			</line>
+			<staticText>
+				<reportElement x="181" y="-351" width="166" height="45" forecolor="#6C086C" uuid="fe68c0f7-b5a1-47a1-ba6f-afd156952291"/>
+				<textElement>
+					<font fontName="Goudy Old Style" size="28" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Fiche Patient]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="-362" width="38" height="20" uuid="85f6688b-fdd1-480f-8b28-b88cd8fc9c56"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Fait le :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="11" y="-351" width="555" height="1" uuid="88f51650-4d78-4018-8e34-679f4472e7e9"/>
+			</line>
+			<image>
+				<reportElement x="12" y="-363" width="89" height="87" uuid="7db82afa-27bc-43b2-8c2f-5d79b27aaa7e"/>
+				<imageExpression><![CDATA["C:\\Users\\azus\\Documents\\NetBeansProjects\\gestion d'une cabinet medicale V7\\src\\Images\\logo_impression.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="12" y="-363" width="89" height="87" uuid="095d3113-d9dd-4737-816d-e74a1ac8360f"/>
+				<imageExpression><![CDATA["C:\\Users\\azus\\Documents\\NetBeansProjects\\gestion d'une cabinet medicale V7\\src\\Images\\logo_impression.png"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="443" y="-362" width="100" height="20" uuid="ca95b9ea-917b-4c88-88b4-a0937d6542a9"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="101" y="-362" width="125" height="20" uuid="6b3b6e75-5c42-418d-9e13-1b96d31c70d3"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[El shifaa Cabinet medical.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="-342" width="100" height="20" uuid="980cf441-3678-473f-91bf-82ae6979302f"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[De : Dr  Nadjib.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="12" y="-363" width="89" height="87" uuid="dc7e9796-0505-4629-85d2-27f680b3f56a"/>
+				<imageExpression><![CDATA["C:\\Users\\azus\\Documents\\NetBeansProjects\\gestion d'une cabinet medicale V7\\src\\Images\\logo_impression.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="10" y="-362" width="553" height="1" uuid="6ccd2dbe-8000-4418-834e-8c6b94431d95"/>
+			</line>
+			<staticText>
+				<reportElement x="181" y="-351" width="166" height="45" forecolor="#6C086C" uuid="0b5a04ca-4c60-4700-9582-571a4a0e34a2"/>
+				<textElement>
+					<font fontName="Goudy Old Style" size="28" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Fiche Patient]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="-362" width="38" height="20" uuid="97de65ae-8ec0-4d5a-a2e9-1f0ab15fbee6"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Fait le :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="11" y="-351" width="555" height="1" uuid="dff7c693-3357-4b54-baf8-07e1e317078d"/>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="443" y="-362" width="100" height="20" uuid="e2f2980d-eecb-4854-baf0-2d6e166031a0"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="101" y="-362" width="125" height="20" uuid="0612204b-602e-4cdd-8f48-9b82fd9a87a7"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[El shifaa Cabinet medical.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="-342" width="100" height="20" uuid="2c1925ec-a98a-4e7b-b2b7-0232717047f7"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[De : Dr  Nadjib.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="12" y="-363" width="89" height="87" uuid="d6c54743-aa8e-498e-ae5e-bd8e4f10beab"/>
+				<imageExpression><![CDATA["C:\\Users\\azus\\Documents\\NetBeansProjects\\gestion d'une cabinet medicale V7\\src\\Images\\logo_impression.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="394" y="-362" width="38" height="20" uuid="91f287f7-4b43-4e65-a548-9b69bd718055"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Fait le :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="-362" width="125" height="20" uuid="f0ff80b1-8182-472c-8d1c-3023e6cabfa7"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[El shifaa Cabinet medical.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="21" width="100" height="20" uuid="d46fe6be-a12f-40a0-bb90-6509e8eb5027"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[De : Dr  Nadjib.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="1" width="125" height="20" uuid="f8dac98c-5162-486b-b2f9-889dbbf6b3a3"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[El shifaa Cabinet medical.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="382" y="1" width="38" height="20" uuid="867a4707-30d0-4e9a-acdb-a17b7ecc8c6c"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Fait le :]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="89" height="87" uuid="61fe1a25-4edc-4173-ac09-86e128eaef39"/>
+				<imageExpression><![CDATA["C:\\Users\\azus\\Documents\\NetBeansProjects\\gestion d'une cabinet medicale V7\\src\\Images\\logo_impression.png"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="431" y="1" width="100" height="20" uuid="6a89cb8d-50bf-4516-90e5-ce522ed5f6ef"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="704" splitType="Stretch">
+			<staticText>
+				<reportElement x="-154" y="-274" width="100" height="20" uuid="73169a05-c5db-47d6-a1c7-302762e49c4b"/>
+				<text><![CDATA[Matricule Patient :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-154" y="-274" width="100" height="20" uuid="b7289ccf-2c06-44ed-bebb-08523ab59b1a"/>
+				<text><![CDATA[Matricule Patient :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-154" y="-274" width="100" height="20" uuid="bf2b747c-bc3f-44de-9a45-930f750c5690"/>
+				<text><![CDATA[Matricule Patient :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="65" width="100" height="20" uuid="be1462b9-2048-4958-8116-c2a7a4619e88"/>
+				<text><![CDATA[Matricule Patient :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="65" width="39" height="20" uuid="7a135742-3c6d-4d17-a463-7813311a9a61"/>
+				<text><![CDATA[Fait le :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-152" y="-250" width="100" height="20" uuid="0b50bc61-a77a-442e-944d-e058c8158b72"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="272" width="100" height="20" uuid="900e0407-b10a-4459-b4a8-054fce6d2ee6"/>
+				<text><![CDATA[Diagnostique :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="445" width="100" height="20" uuid="e6f06615-f71b-4797-b2eb-d8325acb1025"/>
+				<text><![CDATA[Résultat consultation :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-160" y="-212" width="100" height="20" uuid="3cecb375-070a-468f-bdcb-f10a98680a49"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-169" y="-232" width="100" height="20" uuid="c56fdf43-110b-4298-869c-a12baf96a948"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="138" width="100" height="20" uuid="24f36f9b-3d86-4cf7-ac63-6d08fe8d7027"/>
+				<text><![CDATA[Observation]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="11" y="173" width="519" height="99" uuid="6ef5ab68-ba0e-4ad2-947f-8111622765b3"/>
+				<textFieldExpression><![CDATA[$F{observation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="310" width="520" height="111" uuid="91a9bc06-7429-424a-a56a-0d3b3032fefd"/>
+				<textFieldExpression><![CDATA[$F{diagnostique}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="9" y="482" width="522" height="163" uuid="52282d4f-a448-4c75-a9e4-c253082f7c8d"/>
+				<textFieldExpression><![CDATA[$F{résultat_cons}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="65" width="100" height="20" uuid="276609eb-246f-4606-8481-16d862be0ad6"/>
+				<textFieldExpression><![CDATA[$F{date_cons}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="124" y="65" width="100" height="20" uuid="b7585411-9053-460b-b525-bdef54f43fde"/>
+				<textFieldExpression><![CDATA[$F{matricule_pat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="103" width="30" height="20" uuid="ded5169c-2502-4819-8ccf-6ecb00e6a346"/>
+				<text><![CDATA[Par :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="67" y="103" width="100" height="20" uuid="29f33acd-ba8f-4672-8b16-1d263fb7c3a3"/>
+				<textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="196" y="103" width="100" height="20" uuid="b8e96ffb-5d09-4eb6-8a40-5c4cb03263aa"/>
+				<textFieldExpression><![CDATA[$F{prénom}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="19" width="555" height="1" uuid="06a2e848-2f98-46a3-9a9f-db572ed73ed9"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="39153fa7-5935-479b-b329-6502da308e54"/>
+			</line>
+			<staticText>
+				<reportElement x="168" y="20" width="166" height="45" forecolor="#6C086C" uuid="d20513a4-bee7-4c1a-863c-a6178efcb7cb"/>
+				<textElement>
+					<font fontName="Goudy Old Style" size="28" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Fiche Patient]]></text>
+			</staticText>
+			<line>
+				<reportElement x="555" y="19" width="1" height="685" uuid="feaded00-dce5-4451-bd75-a7ed0a9022a2"/>
+			</line>
+			<line>
+				<reportElement x="0" y="20" width="1" height="684" uuid="cdc434e3-15ae-424d-a1e7-f5a11391ff9c"/>
+			</line>
+			<staticText>
+				<reportElement x="11" y="664" width="115" height="20" uuid="4380a38d-8086-4a9e-90ec-6115c80d7835"/>
+				<text><![CDATA[Adresse :Algerie Béjaia]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="703" width="555" height="1" uuid="801a29cc-15b7-4c7f-8825-8c3c603c0db3"/>
+			</line>
+			<line>
+				<reportElement x="1" y="662" width="555" height="1" uuid="890308dc-a615-40ab-b944-b7b1485e24e5"/>
+			</line>
+			<staticText>
+				<reportElement x="11" y="684" width="196" height="20" uuid="dc1f394b-2639-442f-886c-fd3f4aa7e13c"/>
+				<text><![CDATA[Tél / Fix : 06 12 12 12 12 / 034 25 4628]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

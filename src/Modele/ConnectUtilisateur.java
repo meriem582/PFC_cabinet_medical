@@ -1,0 +1,29 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Modele;
+
+import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ *
+ * @author azus
+ */
+public class ConnectUtilisateur {
+    PreparedStatement p;
+    public ResultSet rs;
+    Connexion c=new Connexion();
+    public ConnectUtilisateur() {
+        try {
+            p=c.connexionBdd().prepareStatement("select * from utilisateurs");
+            rs=p.executeQuery();
+        } catch (SQLException ex) {
+            Logger.getLogger(ConnectUtilisateur.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+}

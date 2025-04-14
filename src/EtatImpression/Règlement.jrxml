@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f05918a7-37d7-4059-8505-e590abe223bd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select facture.* , patient.nom_pat,patient.prénom_pat from patient, facture where patient.matricule_pat= facture.matricule_pat;]]>
+	</queryString>
+	<field name="facture_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="matricule_pat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="secretaire_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="consultation_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="montant" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="montant_versé" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reste" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date_versement" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descriprion_versement" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_pat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prénom_pat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="103" splitType="Stretch">
+			<staticText>
+				<reportElement x="437" y="-46" width="100" height="20" uuid="b31aafc6-85a5-4c68-a803-d063216cb717"/>
+				<text><![CDATA[MEDISOFT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="21" width="100" height="20" uuid="e1261c42-3a6a-4e2e-88de-243c93ce0c43"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[De : Dr  Nadjib.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-1" y="0" width="89" height="87" uuid="d854d16a-b659-46ee-84e9-59bb4f787519"/>
+				<imageExpression><![CDATA["C:\\Users\\azus\\Documents\\NetBeansProjects\\gestion d'une cabinet medicale V7\\src\\Images\\logo_impression.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="88" y="1" width="125" height="20" uuid="9a88287c-e4ff-4a76-9a22-60d91d46d4f3"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[El shifaa Cabinet medical.]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="430" y="1" width="100" height="20" uuid="84ce6b9e-4345-4347-9cf7-76a1ed69a1fe"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="381" y="1" width="38" height="20" uuid="1efc9f4c-5dd5-4adb-90cd-1baa9ba553c3"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Fait le :]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="422" splitType="Stretch">
+			<staticText>
+				<reportElement x="27" y="58" width="100" height="20" uuid="de616d80-7ae6-469e-9816-062cf3b3e313"/>
+				<text><![CDATA[Nom :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="94" width="100" height="20" uuid="d2d7d21e-3c1e-4224-90c4-61b3130b016b"/>
+				<text><![CDATA[Prénom :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="138" width="100" height="20" uuid="a7a6d128-4054-4e30-8a01-1de987609f98"/>
+				<text><![CDATA[Montant :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="179" width="100" height="20" uuid="32797f7d-f3bc-4688-9850-66d6a581a3e4"/>
+				<text><![CDATA[Montant versé :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="217" width="100" height="20" uuid="b0f83564-b385-476e-a357-a5da74d57db6"/>
+				<text><![CDATA[Reste :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="264" width="100" height="20" uuid="b1647543-35c0-4b0f-ba7b-3a1c315e07af"/>
+				<text><![CDATA[Date du versement :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="149" y="264" width="100" height="20" uuid="39a8a26d-a523-444f-9fca-54e58db0e294"/>
+				<textFieldExpression><![CDATA[$F{date_versement}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="58" width="100" height="20" uuid="f65de601-a3d0-4c95-955a-ed274f75c3d3"/>
+				<textFieldExpression><![CDATA[$F{nom_pat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="94" width="100" height="20" uuid="704a5616-f0d1-4177-91f7-26d37cea2e13"/>
+				<textFieldExpression><![CDATA[$F{prénom_pat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="138" width="100" height="20" uuid="2c862dfc-5b89-49ca-a91e-9e52fa7e4cbf"/>
+				<textFieldExpression><![CDATA[$F{montant}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="179" width="100" height="20" uuid="6ad0e220-d4a2-4040-990e-e1cb1e3c0361"/>
+				<textFieldExpression><![CDATA[$F{montant_versé}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="217" width="100" height="20" uuid="11d20577-db18-4305-b7ff-0a232e18854a"/>
+				<textFieldExpression><![CDATA[$F{reste}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="438" y="307" width="36" height="20" uuid="76d7ebef-a907-4298-8a7b-1b622bbdde86"/>
+				<text><![CDATA[Cacher]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="13" width="555" height="1" uuid="2ebafc75-5f98-483f-bcde-48117be54c71"/>
+			</line>
+			<staticText>
+				<reportElement x="198" y="14" width="134" height="46" forecolor="#6C086C" uuid="4dc2b751-0c10-4cbc-af93-339d9109ff19"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Goudy Old Style" size="28" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Règlement]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="367" width="555" height="1" uuid="5924cc08-6122-4788-bbdb-ef1da2a986a7"/>
+			</line>
+			<line>
+				<reportElement x="1" y="409" width="555" height="1" uuid="df2961db-f5d5-48e0-b871-26670ea106f0"/>
+			</line>
+			<staticText>
+				<reportElement x="4" y="369" width="115" height="20" uuid="a3f02912-18df-4c28-9fd0-2f47b32c7d92"/>
+				<text><![CDATA[Adresse :Algerie Béjaia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="389" width="196" height="20" uuid="058aaf15-e79c-48a0-98ff-b92f84435d94"/>
+				<text><![CDATA[Tél / Fix : 06 12 12 12 12 / 034 25 4628]]></text>
+			</staticText>
+			<line>
+				<reportElement x="555" y="14" width="1" height="395" uuid="bc127fcc-3de9-4a93-9bbc-b95ca4effbc1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="13" width="1" height="395" uuid="ff3bb2a1-793c-4e75-9a97-4ce2ac45b58a"/>
+			</line>
+			<line>
+				<reportElement x="0" y="3" width="555" height="1" uuid="93541687-b89a-4349-8a12-98bde1a5d7cc"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

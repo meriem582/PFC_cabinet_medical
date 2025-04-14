@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="44ac1b6c-e608-48ef-97e8-435e1977fa6d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     depense.`depense_id` AS depense_depense_id,
+     depense.`date_enregistrement` AS depense_date_enregistrement,
+     depense.`montant` AS depense_montant,
+     depense.`fournisseur_id` AS depense_fournisseur_id,
+     depense.`catégorie` AS depense_catégorie,
+     depense.`num_facture` AS depense_num_facture,
+     depense.`mode_paiement` AS depense_mode_paiement,
+     depense.`comptable_id` AS depense_comptable_id,
+     depense.`periodicité` AS depense_periodicité,
+     depense.`description` AS depense_description
+FROM
+     `depense` depense]]>
+	</queryString>
+	<field name="depense_depense_id" class="java.lang.Integer"/>
+	<field name="depense_date_enregistrement" class="java.sql.Date"/>
+	<field name="depense_montant" class="java.math.BigDecimal"/>
+	<field name="depense_fournisseur_id" class="java.lang.Integer"/>
+	<field name="depense_catégorie" class="java.lang.String"/>
+	<field name="depense_num_facture" class="java.lang.Integer"/>
+	<field name="depense_mode_paiement" class="java.lang.String"/>
+	<field name="depense_comptable_id" class="java.lang.String"/>
+	<field name="depense_periodicité" class="java.lang.String"/>
+	<field name="depense_description" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#00CCCC" uuid="ae4ed7f8-7488-423c-860d-1b9f9ad7b8c6"/>
+				<staticText>
+					<reportElement x="185" y="20" width="209" height="43" forecolor="#000000" uuid="448e588a-b314-46f9-8f4c-3119ef190efc"/>
+					<textElement textAlignment="Justified">
+						<font fontName="Times New Roman" size="34" isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Les Dépenses]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="641cfaf0-bda9-469e-9862-2eccb32e6c0d"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="165" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="44b4beb9-06fa-4eac-996e-e44e26547535"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fournisseur_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="220" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="8cedfd72-73b3-494a-8864-17ed4bc763be"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Catégorie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="275" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="069d0170-b11d-43d2-b4df-2bb5eee2f728"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Num_facture]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="344" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="71490053-2e16-4469-a94c-61e7eb5a235f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mode paiement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="423" y="0" width="72" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="2642d66c-07b4-4bde-b6c2-04b834bf025e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[periodicité]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="495" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="ac580fb0-6e4e-45fe-af1a-9350a4f4f14b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="83" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a1787350-eea9-450a-bf36-82f632a00bf9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date_enregistrement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="83" y="0" width="82" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="da7f1541-d594-4460-99ae-7493be72f9b9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Montant]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="344" y="20" width="79" height="20" uuid="5239a43c-531a-48e8-b14f-f35bfcdff4f1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depense_mode_paiement}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="b012b53f-1d7a-434a-8917-083b977cfb8a"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="83" height="20" uuid="3e0cd1c5-2802-4b83-93ad-53db6d1a1d64"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depense_date_enregistrement}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="83" y="0" width="82" height="20" uuid="9512617e-a9f3-4521-9442-6ef711cb84bd"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depense_montant}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="165" y="0" width="55" height="20" uuid="fc7b8f16-1466-47c0-a5d8-96023e2281d9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depense_fournisseur_id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="0" width="55" height="20" uuid="13e7754e-71b6-4c1b-948e-5e74035d2a61"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depense_catégorie}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="275" y="0" width="69" height="20" uuid="fa855c14-89cf-477d-8723-9ec3c671d673"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depense_num_facture}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="423" y="0" width="72" height="20" uuid="f1c59e64-b88c-4cbe-be80-98c2a5d4da2d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depense_periodicité}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="495" y="0" width="55" height="20" uuid="c757a924-3699-4093-94b6-fc45e7b8824c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depense_description}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="2e9dac2e-055d-47fe-9cdf-5429cd6cd9d6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="8d65b2e0-3473-4131-a5d4-5ac48907dfd2"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="55" y="4" width="100" height="13" uuid="623eb2fb-d540-4ade-9b42-7f50943c976d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
